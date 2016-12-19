@@ -1,22 +1,21 @@
 {
-    "name": "CodeBuildSample2", 
-    "description": "Demo", 
+    "name": "CodeBuildSample2",
+    "description": "Demo",
     "source": {
-        "type": "GITHUB", 
+        "type": "GITHUB",
         "location": "https://github.com/awsclint/CodeBuildSample2"
-    }, 
+    },
     "artifacts": {
-        "type": "S3", 
-        "location": "codebuildoutput", 
-        "packaging": "ZIP", 
-        "outputName": "Sample2.zip"
-    }, 
-    "environment": {
-        "name": "CodeBuildSample2", 
-        "type": "LINUX_CONTAINER", 
-        "image": "aws/codebuild/ruby:2.3.1", 
+        "type": "S3",
+        "location": "codebuildoutput",
+        "packaging": "ZIP",
+        "name": "Sample2.zip"
+    },
+    "environment": { 
+        "type": "LINUX_CONTAINER",
+        "image": "aws/codebuild/ruby:2.3.1",
         "computeType": "BUILD_GENERAL1_SMALL"
-    }, 
-    "serviceRole": "arn:aws:iam::618039141415:role/CodeBuildDefault", 
+    },
+    "serviceRole": "arn:aws:iam::618039141415:role/CodeBuildDefault",
     "timeoutInMinutes": 10
 }
